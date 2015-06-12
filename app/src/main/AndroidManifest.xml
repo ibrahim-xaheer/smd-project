@@ -117,6 +117,10 @@
         <meta-data
             android:name="com.parse.push.notification_icon"
             android:resource="@drawable/ic_launcher" />
+        <!--Include the AdActivity configChanges and theme. -->
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
     </application>
     <permission android:name="com.usman.phaedra.myapplicationfb.permission.C2D_MESSAGE" android:protectionLevel="signature" />
 </manifest>

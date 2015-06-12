@@ -25,6 +25,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import com.usman.phaedra.feely_beta.R;
 
 public class BlueToothMain extends Activity {
@@ -48,6 +51,11 @@ public class BlueToothMain extends Activity {
 		super.onCreate(savedInstanceState);
 		int REQUEST_ENABLE_BT = 1;
 		setContentView(R.layout.activity_fblogin);
+
+		AdView mAdView = (AdView) findViewById(R.id.adView);
+		AdRequest adRequest = new AdRequest.Builder().build();
+		mAdView.loadAd(adRequest);
+
 		mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 		b1=b2=b3=b4=b5=b6=true;	
 		if (mBluetoothAdapter == null) {
