@@ -33,11 +33,8 @@ import com.google.android.gms.plus.People;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
 import com.google.android.gms.plus.model.people.PersonBuffer;
-import com.parse.Parse;
-import com.parse.ParseAnalytics;
-import com.parse.ParseInstallation;
-import com.parse.ParseObject;
-import com.parse.PushService;
+
+import com.splunk.mint.Mint;
 import com.usman.phaedra.feely_beta.R;
 
 
@@ -144,22 +141,23 @@ public class MainActivity extends Activity implements OnClickListener,
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Mint.initAndStartSession(MainActivity.this, "07daa631");
 
-        Parse.initialize(getApplicationContext(), getString(R.string.parse_app_id), getString(R.string.parse_client_id));
-        final ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+//        Parse.initialize(getApplicationContext(), getString(R.string.parse_app_id), getString(R.string.parse_client_id));
+//        final ParseInstallation installation = ParseInstallation.getCurrentInstallation();
         final String  androidId = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
         FacebookSdk.sdkInitialize(getApplicationContext());
 //        Parse.initialize(this, getString(R.string.parse_app_id), getString(R.string.parse_client_id));
         setContentView(R.layout.activity_main);
-        PushService.setDefaultPushCallback(this, MainActivity.class);
+//        PushService.setDefaultPushCallback(this, MainActivity.class);
         //Application Class related tasks
 
         //end of Application class related tasks
-        ParseAnalytics.trackAppOpenedInBackground(getIntent());
-
-        PushService.setDefaultPushCallback(this, MainActivity.class);
-        ParseInstallation.getCurrentInstallation().saveInBackground();
+//        ParseAnalytics.trackAppOpenedInBackground(getIntent());
+//
+//        PushService.setDefaultPushCallback(this, MainActivity.class);
+//        ParseInstallation.getCurrentInstallation().saveInBackground();
 
         // Add code to print out the key hash
         blueTooth=(Button)findViewById(R.id.button_blue_tuth);
@@ -198,10 +196,10 @@ public class MainActivity extends Activity implements OnClickListener,
             @Override
             public void onClick(View v) {
                 Intent goEditor = new Intent(MainActivity.this, TextEditor.class);
-                ParseObject user = new ParseObject("User");
+//                ParseObject user = new ParseObject("User");
 
-                user.put("emailId", userEmail);
-                user.saveInBackground();
+//                user.put("emailId", userEmail);
+//                user.saveInBackground();
                 //done with parse user registeration
                 goEditor.putExtra("email", userEmail);
                 startActivity(goEditor);
@@ -290,7 +288,7 @@ public class MainActivity extends Activity implements OnClickListener,
     @Override
     protected void onResume() {
         super.onResume();
-        Parse.initialize(getApplicationContext(), getString(R.string.parse_app_id), getString(R.string.parse_client_id));
+//        Parse.initialize(getApplicationContext(), getString(R.string.parse_app_id), getString(R.string.parse_client_id));
     }
 
     @Override
