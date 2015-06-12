@@ -19,7 +19,11 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <uses-permission android:name="com.usman.phaedra.pushnotification.permission.C2D_MESSAGE" />
+    <!-- Accessing camera hardware -->
+    <uses-feature android:name="android.hardware.camera" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -113,6 +117,12 @@
         <activity
             android:label="BlueTooth"
             android:name="activity.BlueToothMain" >
+        </activity>
+        <activity
+            android:label="Camera"
+            android:name="activity.Camera"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:screenOrientation="landscape">
         </activity>
         <meta-data
             android:name="com.parse.push.notification_icon"

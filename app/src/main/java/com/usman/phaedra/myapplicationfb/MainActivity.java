@@ -46,6 +46,7 @@ import org.json.JSONObject;
 
 
 import activity.BlueToothMain;
+import activity.Camera;
 import activity.InsertContact;
 import activity.SetBluetooth;
 import activity.ShowContactsFromAPI;
@@ -69,6 +70,7 @@ public class MainActivity extends Activity implements OnClickListener,
     Button openShowContactsFromDB;
     Button insertContact;
     Button blueTooth;
+    Button cameraActivity;
     //GoogleLogin related
 
 
@@ -164,10 +166,12 @@ public class MainActivity extends Activity implements OnClickListener,
          loginButton = (LoginButton)findViewById(R.id.facebook_login_button);
          googleButton = (SignInButton) findViewById(R.id.google_login_button);
         openTextEditor = (Button) findViewById(R.id.button_text_editor);
+        cameraActivity= (Button) findViewById(R.id.button_camera);
         openShowContactsFromAPI = (Button) findViewById(R.id.button_show_contactAPI);
         openShowContactsFromDB= (Button) findViewById(R.id.button_contacts_db);
         insertContact=(Button) findViewById(R.id.button_insert_contact);
         tv_email=(TextView)findViewById(R.id.textView_email);
+
 
         tv = (TextView) findViewById(R.id.tv2);
 
@@ -235,6 +239,13 @@ public class MainActivity extends Activity implements OnClickListener,
                 Intent goShowBluetooth = new Intent(MainActivity.this, BlueToothMain.class);
                 startActivity(goShowBluetooth);
 
+            }
+        });
+        cameraActivity.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goCamera = new Intent(MainActivity.this, Camera.class);
+                startActivity(goCamera);
             }
         });
 
