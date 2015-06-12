@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Feely Beta</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_id">842150075868174</string>
+    <string name="parse_app_id">DqhBE7lyzT64AkZuI9DsZMKWZsw22Cceho3tNuJQ</string>
+    <string name="parse_client_id">s0xFYx4eOwPIkmuo1c2ekeM5x4AsNvE6qktxkXtU</string>
+
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
+
+    <string name="click_me">Click Me!</string>
+    <string name="desc">This is an emoji image</string>
+    <string name="post_Text">Publish it</string>
+    <string name="enterText">Please Enter Text and click for emojis</string>
+    <string name="title_activity_set_bluetooth">SetBluetooth</string>
+    <string name="button1">Light 1</string>
+    <string name="button2">Light 2</string>
+    <string name="button3">Light 3</string>
+    <string name="button4">Fan 1</string>
+    <string name="button5">Switch 1</string>
+    <string name="button6">Switch 2</string>
+    <string name="connect">Connect</string>
+</resources>

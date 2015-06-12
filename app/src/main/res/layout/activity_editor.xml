@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+         android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <ImageView
+            android:id="@+id/image_pannel_visibility"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="85"
+            android:contentDescription="@string/desc"
+            android:padding="5dip"
+            android:src="@drawable/a" />
+
+        <EditText
+            android:id="@+id/edittext_enter_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:hint="@string/enterText" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_submitPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/post_Text" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textview_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layout_emoji_pannel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dip"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imageSmiling"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/a" />
+
+        <ImageView
+            android:id="@+id/imageLaughing"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/d" />
+
+        <ImageView
+            android:id="@+id/imageSad"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/e" />
+
+        <ImageView
+            android:id="@+id/imageAngry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/b" />
+
+        <ImageView
+            android:id="@+id/imageTeasing"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/f" />
+
+        <ImageView
+            android:id="@+id/imageInLove"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/c" />
+    </LinearLayout>
+
+</LinearLayout>
